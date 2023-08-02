@@ -12,9 +12,8 @@ class Circle:
         Returns:
             float or int: result.
         """
-        r=self.r
-        s=pi*r*r
-        return s
+        if self.r > 0:
+            return pi * pow(self.r, 2)
 
     def getLength(self):
         """
@@ -25,8 +24,8 @@ class Circle:
         Returns:
             float or int: result..
         """
-        r=self.r
-        p=pi*r*2
-        return p
-x=Circle(2)
-print(x.getLength())
+        if self.r > 0:
+            return 2 * pi * self.r
+        
+x = Circle(25)
+print(x.getArea())
