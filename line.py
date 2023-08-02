@@ -15,11 +15,11 @@ class Line:
         Returns:
             float or int: distance.
         """
-        x1=self.x1
-        y1=self.y1
-        x2=self.x2
-        y2=self.y2
-        l=sqrt((x2-x1)**2+(y2-y1)**2)
-        return l
-x=Line(3,4,0,0)
-print(x.get_length())
+        if self.y2 == 0:
+            return abs(self.x2) - abs(self.x1)
+        if self.x2 == 0:
+            return abs(self.y2) - abs(self.y1)
+        if self.y2 != 0 and self.x2 != 0:
+            return sqrt((abs(self.x2) - abs(self.x1)) + (abs(self.y2) - abs(self.y1)))
+s = Line(30, 40, 50, 60)
+print(s.get_length())
