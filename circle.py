@@ -1,3 +1,4 @@
+from math import pi
 class Circle:
     def __init__(self, r) -> None:
         self.r = r
@@ -11,7 +12,9 @@ class Circle:
         Returns:
             float or int: result.
         """
-        pass
+        r=self.r
+        s=pi*r*r
+        return s
 
     def getLength(self):
         """
@@ -22,4 +25,8 @@ class Circle:
         Returns:
             float or int: result..
         """
-        pass
+        r=self.r
+        p=pi*r*2
+        return p
+x=Circle(2)
+print(x.getLength())
