@@ -1,3 +1,4 @@
+from math import sqrt
 class Point:
     def __init__(self, x, y) -> None:
         self.x = x
@@ -12,7 +13,7 @@ class Point:
         Returns:
             float or int: distance.
         """
-        pass
+        return "I chorak" if self.x > 0 and self.y > 0 else "II chorak" if self.x < 0 and self.y > 0 else "III chorak" if self.x < 0 and self.y < 0 else "IV chorak"
 
     def distance_from_Ycoordinate(self):
         """
@@ -23,7 +24,7 @@ class Point:
         Returns:
             float or int: distance.
         """
-        pass
+        return self.x
 
     def getQuadrant(self):
         """
@@ -34,7 +35,7 @@ class Point:
         Returns:
             int: quadrant.
         """
-        pass
+        return sqrt(pow(self.x,2) + pow(self.y,2))
 
     def on_Xcoordinate(self):
         """
@@ -45,7 +46,7 @@ class Point:
         Returns:
             bool: result.
         """
-        pass
+        return "nuqta x o\'qda joylashgan" if self.y==0 else "nuqta x o\'qda joylashmagan"
 
     def on_Ycoordinate(self):
         """
@@ -56,5 +57,10 @@ class Point:
         Returns:
             bool: result.
         """
-        pass
- 
+        return "nuqta y o\'qda joylashgan" if self.x==0 else "nuqta y o\'qda joylashmagan"
+point = Point(2,0)
+print(point.distance_from_Xcoordinate())
+print(point.distance_from_Ycoordinate())
+print(point.getQuadrant())
+print(point.on_Xcoordinate())
+print(point.on_Ycoordinate())
